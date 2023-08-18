@@ -1,6 +1,10 @@
 fetch("https://corsproxy.io/?https://www.ime.usp.br/~pf/dicios/br-sem-acentos.txt")
 .then(res => res.text())
-.then(palavras => filtrar(palavras.split('\n')))
+.then(texto => texto.split('\n'))
+.then(palavras => {
+  listarFiltrados(palavras)
+  filtrar(palavras)
+})
 
 const autocompleteInput = document.getElementById('autocomplete');
 
