@@ -7,8 +7,8 @@ fetch("https://corsproxy.io/?https://www.ime.usp.br/~pf/dicios/br-sem-acentos.tx
 })
 
 function listar(palavras) {
-  var ul = document.getElementById('lista')
-  ul.innerHTML = palavras.reduce((list, li) => list + `<li>${li}</li>`, '')
+  const ul = document.getElementById('lista')
+  ul.innerHTML = palavras.reduce((list, palavra) => list + `<li>${palavra}</li>`, '')
 }
 
 function criarFiltro(palavras) {
